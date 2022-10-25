@@ -11,7 +11,6 @@ body{
     text-align: center;
     padding: 40px;
 }
-
 input{
     width: 60%;
     display: block;
@@ -21,10 +20,6 @@ input{
     border-radius: 5px;
     text-align: center;
 }
-/* input::first-letter{
-    text-transform: capitalize;
-} */
-
 #submit{
     width: 30%;
     color: blueviolet;
@@ -43,34 +38,67 @@ h2{
     font-weight: bold;
     margin-bottom: 50px;
 }
-ul{
-    margin-top: 5%;
+#parent{
+    margin-top: 4%;
+    border-radius: 10px;
 }
-li{
+#parent p{
     color: white;
-    list-style: none;
     text-transform: capitalize;
     background-color: red;
     width: 60%;
     padding-top: 6px ;
-    height: 30px;
-    padding:4px 7px ;
+    height: fit-content;
+    padding:3px 10px ;
+    padding-bottom: 0%;
     margin: 0 auto;
     margin-bottom: 3px;
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+    display: grid;
+    grid-template-areas: 
+    'a a '
+    'c b'
+    ;
 }
-span{
-    background-color: aquamarine;
-    font-size: 2em;
-    padding-bottom: 2px;
-    color: red;
+#cancel{
+    font-weight: 500;
+    color: aqua;
     cursor: pointer;
+    text-align: right;
+    grid-area: b; 
 }
+
+#date{
+    font-size: 0.7em;
+    color: aquamarine;
+    grid-area: c;
+    text-align: left;
+}
+#event{
+    grid-area: a;
+    background-color: red;
+    
+}
+#input{
+    grid-area: a;
+}
+
 .footer{
     position: absolute;
     bottom: 0%;
     color: white;
     text-align: center;
     width: 100%;
+}
+@media screen and (max-width:700px ) {
+    input{
+        width: 90%;
+    }
+    #submit{
+        width: 45%;
+    }
+    #parent p{
+        width: 90%;
+    }
+    
 }
